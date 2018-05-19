@@ -8,40 +8,22 @@ export default class App extends React.Component {
         super(props)
         this.state = {
             address: '',
-            tips: '',
         }
-    }
-
-    async componentDidMount() {
-        this.hasMounted = true;
-    }
-
-    componentWillUnmount() {
-        this.hasMounted = false;
     }
 
     handleLogin = address => {
-        if (!window.Account.isValidAddress(address)) {
-            this.setState({tips: '请输入有效的钱包地址'})
-            return
-        }
-
-        this.setState({tips: '', address})
+        this.setState({address})
     }
 
     render() {
-        const {address, tips} = this.state;
+        const {address} = this.state;
 
         return (
             <section className="App">
                 {
-                    !!address
-                    ? (
-                        <Inbox address={address} />
-                    )
-                    : (
-                        <Login onClick={this.handleLogin} tips={tips} />
-                    )
+                    address
+                    ? <Inbox address={address} />
+                    : <Login onClick={this.handleLogin} />
                 }
             </section>
         );

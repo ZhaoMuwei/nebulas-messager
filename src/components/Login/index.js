@@ -7,10 +7,15 @@ import logo from './logo.png'
 import './styles.css'
 
 export default class Login extends React.Component {
+    static propTypes = {
+        onClick: PropTypes.func.isRequired,
+    }
+
     constructor(props) {
         super(props)
         this.state = {
             address: '',
+            tips: '',
         }
     }
 
@@ -19,12 +24,17 @@ export default class Login extends React.Component {
     }
 
     handleConfirm = () => {
-        this.props.onClick(this.state.address.trim())
+        const {address} = this.state
+        if (!window.Account.isValidAddress(address)) {
+            this.setState({tips: '请输入有效的钱包地址'})
+            return
+        }
+        this.setState({tips: ''})
+        this.props.onClick(address.trim())
     }
 
     render() {
-        const {tips} = this.props
-        const {address} = this.state
+        const {address, tips} = this.state
 
         return (
             <section className="Login">
@@ -54,13 +64,4 @@ export default class Login extends React.Component {
             </section>
         )
     }
-}
-
-Login.propTypes = {
-    onClick: PropTypes.func.isRequired,
-    tips: PropTypes.string,
-}
-
-Login.defaultProps = {
-    tips: '',
 }
