@@ -1,0 +1,33 @@
+.Login {
+    position: fixed;
+    width: 380px;
+    padding: 40px 37px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 1px 5px 1px rgba(0,0,0,0.06);
+}
+
+.Login > * {
+    margin-top: 20px;
+}
+
+.Login > .ant-input {
+    text-align: center;
+    display: block;
+    margin-top: 0;
+}
+
+.Login > .ant-alert {
+    text-align: center;
+}
+
+.Login .ant-alert-icon {
+    top: 12px;
+    left: 68px;
+}
+
+.Login > .ant-btn {
+    display: block;
+    width: 100%;
+}

@@ -1,0 +1,26 @@
+{
+    "name": "nebulas-messenger",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "antd": "^3.5.2",
+        "react": "^16.3.2",
+        "react-dom": "^16.3.2",
+        "react-scripts": "1.1.4"
+    },
+    "scripts": {
+        "contract": "rm -f contract/contract.vanilla.js && tsc contract/contract.ts --outFile contract/contract.vanilla.js",
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test --env=jsdom",
+        "eject": "react-scripts eject",
+        "storybook": "start-storybook -p 9009 -s public",
+        "build-storybook": "build-storybook -s public"
+    },
+    "devDependencies": {
+        "@storybook/addon-actions": "^3.4.4",
+        "@storybook/addon-links": "^3.4.4",
+        "@storybook/react": "^3.4.4",
+        "typescript": "^2.8.3"
+    }
+}
