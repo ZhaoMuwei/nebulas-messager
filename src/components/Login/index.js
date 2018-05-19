@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Input from 'antd/lib/input'
 import Button from 'antd/lib/button'
 import Alert from 'antd/lib/alert'
+import logo from './logo.png'
 import './styles.css'
 
 export default class Login extends React.Component {
@@ -27,11 +28,17 @@ export default class Login extends React.Component {
 
         return (
             <section className="Login">
+                <img
+                    src={logo}
+                    className="Login__Logo"
+                    alt="logo of messenger"
+                />
+
                 <Input
                     value={address}
                     onChange={this.handleAddressChange}
                     onPressEnter={this.handleConfirm}
-                    placeholder="请输入钱包地址"
+                    placeholder="输入钱包地址"
                     size="large"
                 />
 
@@ -42,7 +49,7 @@ export default class Login extends React.Component {
                     size="large"
                     onClick={this.handleConfirm}
                 >
-                    由此进入
+                    进入信箱
                 </Button>
             </section>
         )
