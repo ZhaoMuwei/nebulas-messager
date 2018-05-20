@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#000000">
+    <title>Messenger on Nebulas</title>
     <!--
       manifest.json provides metadata used when your web app is added to the
       homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
@@ -23,7 +24,11 @@
     <script type="text/javascript" src="%PUBLIC_URL%/lib/neb.js"></script>
     <script type="text/javascript" src="%PUBLIC_URL%/lib/nebulas.js"></script>
     <script type="text/javascript">
+        // mainnet
+        // var DApp = '';
+        // testnet
         var DApp = 'n1qkN1vZnJAKegAAWaJC6PAy2cTmtLoUk1B';
+
         var nebulas = require('nebulas');
         var Account = nebulas.Account;
         var neb = new nebulas.Neb();
@@ -35,14 +40,25 @@
         var NebPay = require('nebpay');
         var nebPay = new NebPay();
     </script>
-
-    <title>Messenger</title>
+    <style>
+        #lastModifiedTag {
+            position: fixed;
+            bottom: 2px;
+            right: 5px;
+            color: #bbb;
+            font-size: 14px;
+            font-weight: bold;
+            user-select: none;
+            opacity: 0.8;
+        }
+    </style>
   </head>
   <body>
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
     <div id="root"></div>
+    <p id="lastModifiedTag">最近更新: %REACT_APP_LAST_MODIFIED%</p>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
