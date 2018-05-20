@@ -1,9 +1,11 @@
 {
     "name": "nebulas-messenger",
     "version": "1.0.0",
-    "private": true,
+    "private": false,
+    "homepage": "https://zhaomuwei.github.io/nebulas-messenger",
     "dependencies": {
         "antd": "^3.5.2",
+        "gh-pages": "^1.1.0",
         "react": "^16.3.2",
         "react-dom": "^16.3.2",
         "react-scripts": "1.1.4"
@@ -12,6 +14,8 @@
         "contract": "rm -f contract/contract.vanilla.js && tsc contract/contract.ts --outFile contract/contract.vanilla.js",
         "start": "react-scripts start",
         "build": "REACT_APP_LAST_MODIFIED=`date +%Y-%m-%d` react-scripts build",
+        "predeploy": "yarn build",
+        "deploy": "gh-pages -d build",
         "test": "react-scripts test --env=jsdom",
         "eject": "react-scripts eject",
         "storybook": "start-storybook -p 9009 -s public",
