@@ -1,6 +1,6 @@
 .Controls {
     width: 100%;
-    background-color: #E3E3E3;
+    background-color: rgba(100,100,100, 0.15);
 }
 
 .Controls__Buttons {
