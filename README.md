@@ -24,7 +24,7 @@ Nav to https://zhaomuwei.github.io/nebulas-messenger/, of course.
 
 <div align="center">
     <img
-        src="https://raw.githubusercontent.com/ZhaoMuwei/nebulas-messenger/readme/src/doc/shot1.png"
+        src="https://raw.githubusercontent.com/ZhaoMuwei/nebulas-messenger/master/src/doc/shot1.png"
         width="500"
         alt="landing page"
     />
@@ -34,7 +34,7 @@ Use that wallet address to login. If not, I mean if you use other addresses, you
 
 <div align="center">
     <img
-        src="https://raw.githubusercontent.com/ZhaoMuwei/nebulas-messenger/readme/src/doc/shot2.png"
+        src="https://raw.githubusercontent.com/ZhaoMuwei/nebulas-messenger/master/src/doc/shot2.png"
         width="500"
         alt="landing page"
     />
@@ -48,7 +48,7 @@ Let's compose a message then.
 
 <div align="center">
     <img
-        src="https://raw.githubusercontent.com/ZhaoMuwei/nebulas-messenger/readme/src/doc/shot3.png"
+        src="https://raw.githubusercontent.com/ZhaoMuwei/nebulas-messenger/master/src/doc/shot3.png"
         width="580"
         alt="landing page"
     />
@@ -61,7 +61,7 @@ NOT the Chrome's 'reload', cause I haven't done any routing for the app.
 
 <div align="center">
     <img
-        src="https://raw.githubusercontent.com/ZhaoMuwei/nebulas-messenger/readme/src/doc/shot4.png"
+        src="https://raw.githubusercontent.com/ZhaoMuwei/nebulas-messenger/master/src/doc/shot4.png"
         width="580"
         alt="landing page"
     />
@@ -71,7 +71,7 @@ You should see your message showing in mailbox's out tab. Click little 'search' 
 
 <div align="center">
     <img
-        src="https://raw.githubusercontent.com/ZhaoMuwei/nebulas-messenger/readme/src/doc/shot5.png"
+        src="https://raw.githubusercontent.com/ZhaoMuwei/nebulas-messenger/master/src/doc/shot5.png"
         width="580"
         alt="landing page"
     />
