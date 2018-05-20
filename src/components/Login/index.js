@@ -38,29 +38,36 @@ export default class Login extends React.Component {
 
         return (
             <section className="Login">
-                <img
-                    src={logo}
-                    className="Login__Logo"
-                    alt="logo of messenger"
-                />
+                <div className="Login__Form">
+                    <img
+                        src={logo}
+                        className="Login__Logo"
+                        alt="logo of messenger"
+                    />
 
-                <Input
-                    value={address}
-                    onChange={this.handleAddressChange}
-                    onPressEnter={this.handleConfirm}
-                    placeholder="输入钱包地址"
-                    size="large"
-                />
+                    <Input
+                        value={address}
+                        onChange={this.handleAddressChange}
+                        onPressEnter={this.handleConfirm}
+                        placeholder="输入钱包地址"
+                        size="large"
+                    />
 
-                {!!tips && <Alert message={tips} type="error" showIcon />}
+                    {!!tips && <Alert message={tips} type="error" showIcon />}
 
-                <Button
-                    type="primary"
-                    size="large"
-                    onClick={this.handleConfirm}
-                >
-                    进入信箱
-                </Button>
+                    <Button
+                        type="primary"
+                        size="large"
+                        onClick={this.handleConfirm}
+                    >
+                        进入信箱
+                    </Button>
+                </div>
+
+                <div className="Login__Tips">
+                    <p>请使用最新版 Chrome</p>
+                    <p>安装 <a href="https://github.com/ChengOrangeJu/WebExtensionWallet" target="_blank">WebExtensionWallet</a> 插件，并确保导入主网钱包</p>
+                </div>
             </section>
         )
     }
