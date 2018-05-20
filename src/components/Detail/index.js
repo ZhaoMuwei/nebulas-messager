@@ -20,6 +20,14 @@ export default class Detail extends React.Component {
     render() {
         const {visible, subject, content, from, to, timestamp} = this.props
 
+        let date: string;
+        try {
+            date = (new Date(+timestamp)).toLocaleDateString()
+        }
+        catch(error) {
+            date = '*未来*'
+        }
+
         return (
             <Modal
                 visible={visible}
@@ -31,11 +39,11 @@ export default class Detail extends React.Component {
                     <p className="Detail__Title">标题</p>
                     <p className="Detail__Item Detail__Subject">{subject}</p>
 
-                    <p className="Detail__Title">去往</p>
+                    <p className="Detail__Title">发往</p>
                     <p className="Detail__Item Detail__To">{to}</p>
 
                     <p className="Detail__Title">时间</p>
-                    <p className="Detail__Item Detail__Timestamp">{timestamp}</p>
+                    <p className="Detail__Item Detail__Timestamp">{date}</p>
 
                     <p className="Detail__Title">内容</p>
                     <p className="Detail__Item Detail__Content">{content || '*没有内容*'}</p>

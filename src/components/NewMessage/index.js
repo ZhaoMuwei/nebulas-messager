@@ -122,6 +122,10 @@ export default class NewMessage extends React.Component {
                         </div>
                     )
                 }
+
+                <div className="NewMessage__Row">
+                    <Alert message="编写消息，点击发送，在弹出窗口中生成并发起交易，待交易成功后，点击页面上的“刷新”按钮，如此简单。" type="info" showIcon />
+                </div>
             </Modal>
         )
     }

@@ -144,7 +144,7 @@ export default class Inbox extends React.Component {
         switch (view) {
             case 'in':
                 filteredMessages = messages.filter(
-                    message => message.status === 'normal' && message.to === this.state.address
+                    message => message.status === 'normal' && (message.to === this.state.address || message.to === 'You')
                 )
                 break
             case 'out':

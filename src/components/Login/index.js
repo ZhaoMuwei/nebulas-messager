@@ -49,7 +49,7 @@ export default class Login extends React.Component {
                         value={address}
                         onChange={this.handleAddressChange}
                         onPressEnter={this.handleConfirm}
-                        placeholder="输入钱包地址"
+                        placeholder="在此输入已导入的钱包地址"
                         size="large"
                     />
 

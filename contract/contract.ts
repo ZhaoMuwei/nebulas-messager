@@ -97,18 +97,36 @@ class MessageManagement implements IMessageManagement {
         return new Message({
             id: genID(),
             subject: '欢迎',
-            content: '欢迎使用',
+            content: '欢迎使用 MESSENGER，一个基于 NEBULAS 的信息系统。希望你玩得开心。',
             from: 'Nick Wild',
             to,
             timestamp: +new Date() + '',
+            status: 'normal',
+        })
+    }
+
+    // TODO
+    private buildErrorMessage() {
+        return new Message({
+            id: genID(),
+            subject: '不要试图偷看别人的信箱',
+            content: '请输入已经在浏览器插件中导入的钱包地址。',
+            from: 'Nick Wild',
+            to: 'You',
+            timestamp: +new Date() + '',
+            status: 'normal',
         })
     }
 
     list(id: string): Message[] {
         if (id !== Blockchain.transaction.from) {
-            return []
+            return [this.buildErrorMessage()]
         }
-        return this.messagePool.get(id) || []
+        const list = this.messagePool.get(id)
+        if (!list || !list.length) {
+            return [this.buildWelcomeMessage(id)]
+        }
+        return list
     }
 
     send(
@@ -143,7 +161,7 @@ class MessageManagement implements IMessageManagement {
         }
 
         const idOfSender = Blockchain.transaction.from
-        const timestamp = Blockchain.transaction.timestamp
+        const timestamp = Blockchain.transaction.timestamp + '000'
         const listOfReceiver = this.messagePool.get(trimmedToAddress) || []
 
         const newMessage = new Message({
@@ -152,15 +170,28 @@ class MessageManagement implements IMessageManagement {
             content: trimmedContent,
             from: idOfSender,
             to: trimmedToAddress,
-            timestamp: timestamp,
+            timestamp,
         })
 
+        // Add new message to receiver's list
         if (listOfReceiver.length) {
             listOfReceiver.unshift(newMessage)
             this.messagePool.set(trimmedToAddress, listOfReceiver)
         }
         else {
             this.messagePool.set(trimmedToAddress, [newMessage])
+        }
+
+        // Add new message to sender's own list, if receiver and sender are not the same guy.
+        if (trimmedToAddress !== trimmedFromAddress) {
+            const listOfSender = this.messagePool.get(trimmedFromAddress) || []
+            if (listOfSender.length) {
+                listOfSender.unshift(newMessage)
+                this.messagePool.set(trimmedFromAddress, listOfSender)
+            }
+            else {
+                this.messagePool.set(trimmedFromAddress, [newMessage])
+            }
         }
 
         return 1
