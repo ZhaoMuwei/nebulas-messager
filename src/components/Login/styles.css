@@ -3,7 +3,7 @@
     top: 50%;
     left: 50%;
     width: 380px;
-    transform: translate(-50%, -70%);
+    transform: translate(-50%, -60%);
 }
 
 .Login__Form {
@@ -40,28 +40,33 @@
     width: 100%;
 }
 
-.Login__Tips {
+.Login__Tips, .Login__Love {
     margin-top: 20px;
     font-size: 12px;
-    /* color: rgba(0, 0, 0, .55); */
+    text-align: center;
     opacity: .8;
     transition: all .12s ease;
 }
 
-.Login__Tips:hover {
+.Login__Tips:hover,
+.Login__Love:hover {
     opacity: 1;
 }
 
 .Login__Tips p {
     margin: 1px 0;
-    text-align: center;
 }
 
 .Login__Tips p a {
     display: inline-block;
     padding: 0px 6px;
+    margin: 0 3px;
     color: #f0f0f0;
     background: #1890ff;
     border-radius: 4px;
     text-decoration: none;
+}
+
+.Login__Love-Icon {
+    font-size: 1.4em;
 }

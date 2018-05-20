@@ -1,0 +1,42 @@
+.Detail {
+
+}
+
+.Detail__Title {
+    display: inline-block;
+    margin-top: 17px;
+    margin-bottom: 5px;
+    padding: 2px 10px;
+
+    color: #FFF;
+    font-weight: bold;
+    border-radius: 4px;
+    background: rgba(0,0,0,0.65);
+}
+.Detail__Title:first-child {
+    margin-top: 10px;
+}
+
+.Detail__Item {
+    padding-left: 2px;
+}
+
+.Detail__Subject {
+
+}
+
+.Detail__From {
+
+}
+
+.Detail__To {
+
+}
+
+.Detail__Timestamp {
+
+}
+
+.Detail__Content {
+
+}

@@ -1,8 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import message from 'antd/lib/message'
 import Controls from '../Controls'
 import List from '../List'
 import NewMessage from '../NewMessage'
+import Detail from '../Detail'
 import request from '../../utils/request'
 import './styles.css'
 
@@ -18,6 +20,9 @@ export default class Inbox extends React.Component {
             loading: true,
             messages: [],
             isModalVisible: false,
+            view: 'in',
+            isDetailVisible: false,
+            detailID: '',
         }
     }
 
@@ -78,6 +83,26 @@ export default class Inbox extends React.Component {
         this.loadMessages()
     }
 
+    handleViewChange = view => {
+        this.setState({view})
+    }
+
+    handleMessageDelete = id => {
+        // TODO
+        message.info('删除功能即将上线');
+    }
+
+    handleMessageDetail = id => {
+        this.setState({isDetailVisible: true, detailID: id})
+    }
+
+    buildDetailData = id => {
+        if (!id) {
+            return {}
+        }
+        return this.state.messages.find(message => message.id === id)
+    }
+
     handleNewMessageOK = async ({address, subject, content}) => {
         const method = 'neb_sendTransaction'
         const response = await request({
@@ -97,9 +122,9 @@ export default class Inbox extends React.Component {
         }
 
         // Finally, msg sent successfully.
-        this.setState({isModalVisible: false}, () => {
-            // this.loadMessages()
-        })
+        setTimeout(() => {
+            this.setState({isModalVisible: false})
+        }, 3 * 1000)
     }
 
     handleNewMessageCancel = () => {
@@ -111,20 +136,44 @@ export default class Inbox extends React.Component {
             messages,
             loading,
             isModalVisible,
+            view,
+            isDetailVisible,
         } = this.state
 
+        let filteredMessages
+        switch (view) {
+            case 'in':
+                filteredMessages = messages.filter(
+                    message => message.status === 'normal' && message.to === this.state.address
+                )
+                break
+            case 'out':
+                filteredMessages = messages.filter(
+                    message => message.status === 'normal' && message.from === this.state.address
+                )
+                break;
+            default:
+                filteredMessages = messages.filter(
+                    message => message.status === 'deleted'
+                )
+        }
+
         return (
-            <section className="Inbox">
+            <section className="Mailbox">
                 <Controls
                     disabled={loading}
                     loading={loading}
+                    currentView={view}
                     onCreateButtonClick={this.handleCreateButtonClick}
                     onReloadButtonClick={this.handleReloadButtonClick}
+                    onViewChange={this.handleViewChange}
                 />
-                <div className="Inbox__ListWrapper">
+                <div className="Mailbox__ListWrapper">
                     <List
                         loading={loading}
-                        data={messages}
+                        data={filteredMessages}
+                        onDelete={this.handleMessageDelete}
+                        onDetail={this.handleMessageDetail}
                     />
                 </div>
 
@@ -132,6 +181,12 @@ export default class Inbox extends React.Component {
                     visible={isModalVisible}
                     onOK={this.handleNewMessageOK}
                     onCancel={this.handleNewMessageCancel}
+                />
+
+                <Detail
+                    visible={isDetailVisible}
+                    onCancel={() => this.setState({isDetailVisible: false})}
+                    {...this.buildDetailData(this.state.detailID)}
                 />
             </section>
         )

@@ -66,8 +66,27 @@ export default class Login extends React.Component {
 
                 <div className="Login__Tips">
                     <p>请使用最新版 Chrome</p>
-                    <p>安装 <a href="https://github.com/ChengOrangeJu/WebExtensionWallet" target="_blank">WebExtensionWallet</a> 插件，并确保导入主网钱包</p>
+                    <p>
+                        安装
+                        <a
+                            href="https://github.com/ChengOrangeJu/WebExtensionWallet"
+                            target="_blank" rel="noopener noreferrer">
+                            WebExtensionWallet
+                        </a>
+                        插件，并确保导入主网钱包
+                    </p>
                 </div>
+
+                <p className="Login__Love">
+                    Made with <span className="Login__Love-Icon">♥</span> by&nbsp;
+                    <a
+                        href="https://github.com/ZhaoMuwei/nebulas-messenger"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        ZhaoMuwei
+                    </a>
+                </p>
             </section>
         )
     }

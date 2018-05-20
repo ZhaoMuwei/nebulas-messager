@@ -1,0 +1,72 @@
+.ListItem {
+    position: relative;
+    padding: 10px 0;
+    padding-left: 50px;
+    min-height: 60px;
+    border-bottom: 1px solid #E8E8E8;
+}
+
+.ListItem p {
+    margin: 0;
+}
+
+.ListItem__Tooltip .ant-tooltip-inner {
+    max-width: unset;
+}
+
+/* User Avatar */
+.ListItem__Avatar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    color: #FFF;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: center;
+    background: #1890ff;
+    user-select: none;
+    transform: translate(20%, 45%);
+}
+
+/* Message Subject */
+.ListItem__Subject {
+    font-weight: bold;
+    max-width: 50%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* Message Content */
+.ListItem__Content {
+    padding-right: 60px;
+    word-wrap: break-word;
+}
+
+/* Operations */
+.ListItem__Operations {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    opacity: 0;
+    transition: all .12s ease;
+}
+
+.ListItem:hover .ListItem__Operations {
+    opacity: 1;
+}
+
+.ListItem__Operations button {
+    margin-left: 3px;
+}
+
+.ListItem__Operations .anticon {
+    position: relative;
+    top: -1px;
+    font-size: 12px;
+}

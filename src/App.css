@@ -15,4 +15,9 @@
     background: #f3f5f7 url("./geo.png") top center;
     background-size: 220px;
     opacity: .8;
+    z-index: -1;
+}
+
+p {
+    margin: 0;
 }
