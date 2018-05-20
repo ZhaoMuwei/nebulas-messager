@@ -20,6 +20,7 @@ export default class App extends React.Component {
 
         return (
             <section className="App">
+                <div className="App__Background" />
                 {
                     address
                     ? <Inbox address={address} />
