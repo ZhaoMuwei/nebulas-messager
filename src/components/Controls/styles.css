@@ -1,0 +1,26 @@
+.Controls {
+    width: 100%;
+    background-color: #E3E3E3;
+}
+
+.Controls__Buttons {
+    width: 800px;
+    margin: 0 auto;
+    padding: 13px 0;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.Controls__Edit-Buttons button:first-child {
+    margin-right: 10px;
+}
+
+.Controls__Edit-Buttons button:not(.ant-btn-primary) {
+    height: 34px;
+}
+
+.Controls__View-Buttons {
+
+}

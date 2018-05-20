@@ -1,0 +1,25 @@
+.NewMessage__Row {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: 22px;
+}
+
+.NewMessage__Row:last-child {
+    margin-bottom: 0;
+}
+
+.NewMessage__Row label {
+    flex: 0 0 40px;
+    line-height: 28px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.NewMessage__Row input {
+    flex: 1 1 0;
+}
+
+.NewMessage__Row .ant-alert {
+    width: 100%;
+    margin-left: 40px;
+}

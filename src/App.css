@@ -1,0 +1,23 @@
+.App {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.App__Background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f3f5f7 url("./geo.png") top center;
+    background-size: 220px;
+    opacity: .8;
+    z-index: -1;
+}
+
+p {
+    margin: 0;
+}
