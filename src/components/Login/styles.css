@@ -9,23 +9,21 @@
     box-shadow: 0 1px 5px 1px rgba(0,0,0,0.06);
 }
 
-.Login > * {
-    margin-top: 20px;
-}
-
 .Login__Logo {
     display: block;
-    width: 244px;
-    height: 64px;
-    margin: 0 auto;
+    width: 261px;
+    height: 56px;
+    margin: 5px auto 25px auto;
 }
 
 .Login > .ant-input {
-    text-align: center;
     display: block;
+    margin: 20px 0;
+    text-align: center;
 }
 
 .Login > .ant-alert {
+    margin: 20px 0;
     text-align: center;
 }
 
