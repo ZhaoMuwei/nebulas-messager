@@ -1,8 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Input from 'antd/lib/input'
-import Button from 'antd/lib/button'
-import Alert from 'antd/lib/alert'
+import {Input, Button, Message} from 'rsuite'
 import logo from './logo.png'
 import './styles.css'
 
@@ -19,8 +17,8 @@ export default class Login extends React.Component {
         }
     }
 
-    handleAddressChange = evt => {
-        this.setState({address: evt.target.value})
+    handleAddressChange = value => {
+        this.setState({address: value})
     }
 
     handleConfirm = () => {
@@ -50,18 +48,19 @@ export default class Login extends React.Component {
                         onChange={this.handleAddressChange}
                         onPressEnter={this.handleConfirm}
                         placeholder="在此输入已导入的钱包地址"
-                        size="large"
+                        size="lg"
                     />
 
-                    {!!tips && <Alert message={tips} type="error" showIcon />}
-
                     <Button
-                        type="primary"
-                        size="large"
+                        block
+                        size="lg"
+                        appearance="primary"
                         onClick={this.handleConfirm}
                     >
                         进入信箱
                     </Button>
+
+                    {!!tips && <Message title={tips} type="error" showIcon />}
                 </div>
 
                 <div className="Login__Tips">

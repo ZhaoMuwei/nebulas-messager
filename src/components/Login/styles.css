@@ -19,25 +19,16 @@
     margin: 5px auto 25px auto;
 }
 
-.Login__Form > .ant-input {
+.Login__Form > .rs-input {
     display: block;
     margin: 20px 0;
     text-align: center;
 }
 
-.Login__Form > .ant-alert {
-    margin: 20px 0;
+.Login__Form > .rs-message {
+    margin-top: 20px;
     text-align: center;
-}
-
-.Login__Form .ant-alert-icon {
-    top: 12px;
-    left: 68px;
-}
-
-.Login__Form > .ant-btn {
-    display: block;
-    width: 100%;
+    animation: none;
 }
 
 .Login__Tips, .Login__Love {
@@ -45,7 +36,6 @@
     font-size: 12px;
     text-align: center;
     opacity: .8;
-    transition: all .12s ease;
 }
 
 .Login__Tips:hover,
@@ -62,7 +52,7 @@
     padding: 0px 6px;
     margin: 0 3px;
     color: #f0f0f0;
-    background: #1890ff;
+    background: #34c3ff;
     border-radius: 4px;
     text-decoration: none;
 }

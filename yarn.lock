@@ -2087,6 +2087,10 @@ chalk@^2.0.0, chalk@^2.0.1, chalk@^2.1.0, chalk@^2.3.2, chalk@^2.4.1:
     escape-string-regexp "^1.0.5"
     supports-color "^5.3.0"
 
+change-emitter@^0.1.2:
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/change-emitter/-/change-emitter-0.1.6.tgz#e8b2fe3d7f1ab7d69a32199aff91ea6931409515"
+
 chardet@^0.4.0:
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/chardet/-/chardet-0.4.2.tgz#b5473b33dc97c424e5d98dc87d55d4d8a29c8bf2"
@@ -2161,6 +2165,10 @@ class-utils@^0.3.5:
 classnames@2.x, classnames@^2.2.0, classnames@^2.2.1, classnames@^2.2.3, classnames@^2.2.5, classnames@~2.2.0:
   version "2.2.5"
   resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.5.tgz#fb3801d453467649ef3603c7d61a02bd129bde6d"
+
+classnames@>=2.0.0:
+  version "2.2.6"
+  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
 
 clean-css@4.1.x:
   version "4.1.11"
@@ -2887,6 +2895,14 @@ dom-helpers@^3.3.1:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/dom-helpers/-/dom-helpers-3.3.1.tgz#fc1a4e15ffdf60ddde03a480a9c0fece821dd4a6"
 
+dom-lib@1.0.0, dom-lib@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/dom-lib/-/dom-lib-1.0.0.tgz#d0283a23d4ab46ba4be939bcf9e87ea469b6d8db"
+
+dom-lib@1.0.0-beta:
+  version "1.0.0-beta"
+  resolved "https://registry.yarnpkg.com/dom-lib/-/dom-lib-1.0.0-beta.tgz#e2203f61954177c3e41d0efaf94f06dbd0b628e8"
+
 dom-matches@>=1.0.1:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/dom-matches/-/dom-matches-2.0.0.tgz#d2728b416a87533980eb089b848d253cf23a758c"
@@ -3009,6 +3025,10 @@ electron-to-chromium@^1.2.7, electron-to-chromium@^1.3.30:
 electron-to-chromium@^1.3.45:
   version "1.3.47"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.47.tgz#764e887ca9104d01a0ac8eabee7dfc0e2ce14104"
+
+element-resize-event@^2.0.9:
+  version "2.0.9"
+  resolved "https://registry.yarnpkg.com/element-resize-event/-/element-resize-event-2.0.9.tgz#2f5e1581a296eb5275210c141bc56342e218f876"
 
 elliptic@^6.0.0:
   version "6.4.0"
@@ -3586,6 +3606,18 @@ fb-watchman@^2.0.0:
   resolved "https://registry.yarnpkg.com/fb-watchman/-/fb-watchman-2.0.0.tgz#54e9abf7dfa2f26cd9b1636c588c1afc05de5d58"
   dependencies:
     bser "^2.0.0"
+
+fbjs@^0.8.1:
+  version "0.8.17"
+  resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-0.8.17.tgz#c4d598ead6949112653d6588b01a5cdcd9f90fdd"
+  dependencies:
+    core-js "^1.0.0"
+    isomorphic-fetch "^2.1.1"
+    loose-envify "^1.0.0"
+    object-assign "^4.1.0"
+    promise "^7.1.1"
+    setimmediate "^1.0.5"
+    ua-parser-js "^0.7.18"
 
 fbjs@^0.8.12, fbjs@^0.8.15, fbjs@^0.8.16, fbjs@^0.8.9:
   version "0.8.16"
@@ -5423,7 +5455,7 @@ lodash.uniq@^4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
 
-"lodash@>=3.5 <5", lodash@^4.14.0, lodash@^4.15.0, lodash@^4.16.5, lodash@^4.17.0, lodash@^4.17.2, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.2.1, lodash@^4.3.0:
+"lodash@>=3.5 <5", lodash@^4.11.1, lodash@^4.14.0, lodash@^4.15.0, lodash@^4.16.5, lodash@^4.17.0, lodash@^4.17.2, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.2.1, lodash@^4.3.0:
   version "4.17.10"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.10.tgz#1b7793cf7259ea38fb3661d4d38b3260af8ae4e7"
 
@@ -5722,6 +5754,10 @@ mkdirp@0.5.1, mkdirp@0.5.x, mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkdirp@
 moment@2.x, moment@^2.19.3:
   version "2.22.1"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.1.tgz#529a2e9bf973f259c9643d237fda84de3a26e8ad"
+
+moment@^2.20.1:
+  version "2.22.2"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.2.tgz#3c257f9839fc0e93ff53149632239eb90783ff66"
 
 move-concurrently@^1.0.1:
   version "1.0.1"
@@ -7249,6 +7285,10 @@ react-error-overlay@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-4.0.0.tgz#d198408a85b4070937a98667f500c832f86bd5d4"
 
+react-flow-types@^0.2.0-beta.6:
+  version "0.2.0-beta.6"
+  resolved "https://registry.yarnpkg.com/react-flow-types/-/react-flow-types-0.2.0-beta.6.tgz#bf49c8b7864fcd0951b03286c63a80d66ce9fae4"
+
 react-fuzzy@^0.5.2:
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/react-fuzzy/-/react-fuzzy-0.5.2.tgz#fc13bf6f0b785e5fefe908724efebec4935eaefe"
@@ -7484,6 +7524,15 @@ rechoir@^0.6.2:
   resolved "https://registry.yarnpkg.com/rechoir/-/rechoir-0.6.2.tgz#85204b54dba82d5742e28c96756ef43af50e3384"
   dependencies:
     resolve "^1.1.6"
+
+recompose@^0.26.0:
+  version "0.26.0"
+  resolved "https://registry.yarnpkg.com/recompose/-/recompose-0.26.0.tgz#9babff039cb72ba5bd17366d55d7232fbdfb2d30"
+  dependencies:
+    change-emitter "^0.1.2"
+    fbjs "^0.8.1"
+    hoist-non-react-statics "^2.3.1"
+    symbol-observable "^1.0.4"
 
 recursive-readdir@2.2.1:
   version "2.2.1"
@@ -7755,6 +7804,133 @@ rmc-feedback@^2.0.0:
   dependencies:
     babel-runtime "6.x"
     classnames "^2.2.5"
+
+rsuite-cascader@~3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/rsuite-cascader/-/rsuite-cascader-3.0.4.tgz#f9d2b2bbf259fadb98edc766116bf9239abdc64b"
+  dependencies:
+    classnames ">=2.0.0"
+    dom-lib "^1.0.0"
+    lodash "^4.17.4"
+    prop-types "^15.5.10"
+    rsuite-intl "^1.0.3"
+
+rsuite-checkpicker@~3.0.5:
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/rsuite-checkpicker/-/rsuite-checkpicker-3.0.5.tgz#f88d2d542ca205938d21a77972ca994d6b7dc441"
+  dependencies:
+    classnames ">=2.0.0"
+    dom-lib "1.0.0"
+    lodash "^4.17.4"
+    prop-types "^15.5.10"
+    rsuite-intl "^1.0.3"
+
+rsuite-checktreepicker@~3.0.8:
+  version "3.0.9"
+  resolved "https://registry.yarnpkg.com/rsuite-checktreepicker/-/rsuite-checktreepicker-3.0.9.tgz#8e077fad9f3ef20cc9476603e7f4660cd790b9e8"
+  dependencies:
+    classnames "^2.2.5"
+    dom-lib "^1.0.0"
+    lodash "^4.17.4"
+    rsuite-intl "^1.0.1"
+
+rsuite-datepicker@~3.0.5:
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/rsuite-datepicker/-/rsuite-datepicker-3.0.5.tgz#53844036d266ba554be38d93e057a38fef5ae1ed"
+  dependencies:
+    classnames ">=2.0.0"
+    dom-lib "^1.0.0"
+    lodash "^4.17.4"
+    moment "^2.20.1"
+    prop-types "^15.5.10"
+    rsuite-intl "^1.0.4"
+
+rsuite-daterangepicker@~3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/rsuite-daterangepicker/-/rsuite-daterangepicker-3.0.4.tgz#c75e5b0c915dd57b783f4aead172e27011138962"
+  dependencies:
+    classnames ">=2.0.0"
+    dom-lib "^1.0.0"
+    lodash "^4.17.4"
+    moment "^2.20.1"
+    prop-types "^15.5.10"
+    rsuite-intl "^1.0.4"
+
+rsuite-intl@^1.0.1, rsuite-intl@^1.0.3, rsuite-intl@^1.0.4, rsuite-intl@~1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/rsuite-intl/-/rsuite-intl-1.0.4.tgz#182451286ad39bf0099a16490d01b9a4b4a89c16"
+  dependencies:
+    prop-types "^15.5.10"
+
+rsuite-notification@~3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/rsuite-notification/-/rsuite-notification-3.0.2.tgz#4a81d2913479eb570e220a1eaa68b5094f13ebde"
+  dependencies:
+    classnames "^2.2.5"
+
+rsuite-schema@~0.0.12:
+  version "0.0.12"
+  resolved "https://registry.yarnpkg.com/rsuite-schema/-/rsuite-schema-0.0.12.tgz#2a466b91b4636bcdd36ff2f3d8c3a99b8cdec470"
+
+rsuite-selectpicker@~3.0.5:
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/rsuite-selectpicker/-/rsuite-selectpicker-3.0.5.tgz#2c1f69552b5d4ed743031621f4b2b250f0ec56dc"
+  dependencies:
+    classnames ">=2.0.0"
+    dom-lib "^1.0.0"
+    lodash "^4.17.4"
+    prop-types "^15.5.10"
+    rsuite-intl "^1.0.3"
+
+rsuite-table@~3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/rsuite-table/-/rsuite-table-3.0.2.tgz#b9593c62d7edf33bce4bce3c7ebf73b7853180c5"
+  dependencies:
+    classnames "^2.2.5"
+    dom-lib "^1.0.0"
+    element-resize-event "^2.0.9"
+    lodash "^4.17.5"
+    prop-types "^15.5.10"
+
+rsuite-treepicker@~3.0.7:
+  version "3.0.7"
+  resolved "https://registry.yarnpkg.com/rsuite-treepicker/-/rsuite-treepicker-3.0.7.tgz#3300ead642210783cbbc6a2370653ef525cf6439"
+  dependencies:
+    classnames "^2.2.5"
+    dom-lib "^1.0.0"
+    lodash "^4.17.4"
+    rsuite-intl "^1.0.3"
+
+rsuite-utils@~1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/rsuite-utils/-/rsuite-utils-1.2.0.tgz#ab4273f4bbf0f1e193ea3c44245b5c9faa79dcb8"
+  dependencies:
+    classnames "^2.2.5"
+    dom-lib "1.0.0-beta"
+    lodash "^4.17.4"
+
+rsuite@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/rsuite/-/rsuite-3.1.1.tgz#9ed3b4c391d87298c0aa4451bd36e2fd186598dd"
+  dependencies:
+    classnames ">=2.0.0"
+    dom-lib "^1.0.0"
+    lodash "^4.11.1"
+    prop-types "^15.6.0"
+    react-flow-types "^0.2.0-beta.6"
+    recompose "^0.26.0"
+    rsuite-cascader "~3.0.4"
+    rsuite-checkpicker "~3.0.5"
+    rsuite-checktreepicker "~3.0.8"
+    rsuite-datepicker "~3.0.5"
+    rsuite-daterangepicker "~3.0.4"
+    rsuite-intl "~1.0.4"
+    rsuite-notification "~3.0.2"
+    rsuite-schema "~0.0.12"
+    rsuite-selectpicker "~3.0.5"
+    rsuite-table "~3.0.2"
+    rsuite-treepicker "~3.0.7"
+    rsuite-utils "~1.2.0"
 
 run-async@^2.2.0:
   version "2.3.0"
@@ -8392,7 +8568,7 @@ sw-toolbox@^3.4.0:
     path-to-regexp "^1.0.1"
     serviceworker-cache-polyfill "^4.0.0"
 
-symbol-observable@^1.0.3:
+symbol-observable@^1.0.3, symbol-observable@^1.0.4:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
 
@@ -8577,7 +8753,7 @@ typescript@^2.8.3:
   version "2.8.3"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.8.3.tgz#5d817f9b6f31bb871835f4edf0089f21abe6c170"
 
-ua-parser-js@^0.7.9:
+ua-parser-js@^0.7.18, ua-parser-js@^0.7.9:
   version "0.7.18"
   resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.18.tgz#a7bfd92f56edfb117083b69e31d2aa8882d4b1ed"
 

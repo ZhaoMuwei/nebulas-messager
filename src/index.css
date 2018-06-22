@@ -1,4 +1,5 @@
 @import '~antd/dist/antd.css';
+@import '~rsuite/dist/styles/rsuite.min.css';
 
 body {
     margin: 0;
